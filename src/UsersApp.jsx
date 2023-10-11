@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { useState } from "react"
 import { UserList } from "./componente/userList"
 
