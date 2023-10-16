@@ -8,12 +8,12 @@ import { UsuarioContext } from "./UsuarioContext";
 
 export const LoginScreen = () => {
 
-    const initialForm={
+    const initialForm=[{
         nombre: '',
         tecnologia: '',
         email: '',
         contraseña: ''
-    }
+    }]
 
     
     const {formState,onInputChange} = useForm(initialForm);
@@ -23,7 +23,7 @@ export const LoginScreen = () => {
     const {setUsuario,usuario} = useContext(UsuarioContext) //se lo pasamos a traves de UsuarioContext.Provider en ./UsuarioProvider
 
     const onSubmit =(event)=>{
-       setUsuario(formState)
+       setUsuario([...usuario,formState])
        event.preventDefault()
        console.log(usuario)
       
